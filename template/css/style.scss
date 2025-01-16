@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+b {
+    font-size: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    line-height: 1;
+    color: white;
+    font-size: 20px;
+    font-family: Segoe UI;
+    background-color: #97A38D;  
+    font-weight: 400;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+._container {
+    max-width: 1350px;
+    margin: 0px auto;
+    padding: 0 20px;
+    box-sizing: content-box; /* Сам прибавляет padding */
+}
+
+/*
+._ibg {
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        object-fit: cover;
+    }
+}
+ */
+
+/* ----------------------------------- */
+
+@font-face {
+    font-family: 'SassyFrass-Regular';
+    src: url(../fonts/SassyFrass-Regular.ttf);
+    font-style: normal;
+	font-weight: normal;
+}
+
+@import 'anim-img';
+@import 'main';
+@import 'page-image';
+
+
+/* Рамки */
+
+$border-size: 4px;
+$border-size-mobile: 2px;
+
+.hover-text-one figure img {
+	border: $border-size solid #C9B173; 
+}
+
+.about__body {
+    img {
+        border: $border-size solid #C9B173;
+    }
+}
+
+.materials__img {
+    border: $border-size solid #C9B173;
+}
+
+@media (max-width: 880px) {
+    .hover-text-one figure img {
+        border: $border-size-mobile solid #C9B173; 
+    }
+    
+    .about__body {
+        img {
+            border: $border-size-mobile solid #C9B173;
+        }
+    }
+    
+    .materials__img {
+        border: $border-size-mobile solid #C9B173 !important;
+    }
+}
